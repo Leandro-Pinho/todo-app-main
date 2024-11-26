@@ -1,6 +1,5 @@
-const dark = document.getElementById('toggleDark')
+const changeThemeBtn = document.querySelector('#change-theme')
 
-dark.addEventListener('click', () => {
-  let body = document.body
-   body.classList.toggle('dark')
+changeThemeBtn.addEventListener('change', () => {
+   document.body.classList.toggle('dark')
 })

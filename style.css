@@ -19,7 +19,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  background-color: var(--Very-Light-Gray);
+  background-color: var(--Very-Light-Grayish-Blue);
+  color: var(--Very-Light-Gray);
+
+  display: grid;
+  width: 100vw;
+
+  place-items: center;
 }
 
 body.dark {
@@ -36,4 +42,37 @@ body.dark {
   background-size: cover;
 
   background-color: var(--Very-Dark-Blue);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 100px;
+}
+
+header nav h1 {
+  font-size: 42px;
+  letter-spacing: 0.5cm;
+}
+
+header nav img {
+  width: 38px;
+  cursor: pointer;
+  /* background-image: url(./images/icon-sun.svg); */
+}
+
+#change-theme {
+  display: none;
+}
+
+#light {
+  display: none;
+}
+
+.dark #light {
+  display: block;
+}
+.dark #dark {
+  display: none;
 }

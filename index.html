@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
- 
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>TODO</h1>
-      <img src="./images/icon-sun.svg" alt="sun/moon" id="toggleDark">
-    </nav>
-  </header>
+    <title>Todo app</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>TODO</h1>
+        <div>
+          <input type="checkbox" name="change-theme" id="change-theme" />
+        </div>
+        <label for="change-theme">
+          <img src="./images/icon-moon.svg" alt="moon" id="dark" />
+          <img src="./images/icon-sun.svg" alt="sun" id="light" />
+        </label>
+      </nav>
+    </header>
 
-  Todo
+    Todo
 
-  <!-- Add dynamic number --> items left
+    <!-- Add dynamic number -->
+    items left All Active Completed Clear Completed Drag and drop to reorder
+    list
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
