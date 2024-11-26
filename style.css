@@ -59,9 +59,9 @@ header nav h1 {
 header nav img {
   width: 38px;
   cursor: pointer;
-  /* background-image: url(./images/icon-sun.svg); */
 }
 
+/* dark mode  */
 #change-theme {
   display: none;
 }
@@ -76,3 +76,80 @@ header nav img {
 .dark #dark {
   display: none;
 }
+
+/* input search  */
+.inputSearch {
+  width: 500px;
+  /* background-color: tomato; */
+  margin-top: 30px;
+  position: relative;
+}
+
+.inputSearch .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--Very-Light-Grayish-Blue);
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  z-index: 10;
+}
+
+.inputSearch .search {
+  width: 100%;
+  padding: 15px 20px 15px 50px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+
+  font-size: 20px;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.inputSearch .search:focus {
+  outline: none;
+}
+
+/* list  */
+main ul li {
+  list-style: none;
+
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 15px 50px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+main ul li .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--Very-Light-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main ul li .circle #check {
+    width: 10px;
+    height: 10px;
+}
+
+main ul li .text-list {
+  display: flex;
+  column-gap: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+main ul li .text-list.checked .circle{
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+}
+main ul li .text-list.checked {
+    text-decoration: line-through;
+}
+
