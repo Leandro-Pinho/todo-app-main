@@ -20,7 +20,7 @@ body {
   background-size: cover;
 
   background-color: var(--Very-Light-Grayish-Blue);
-  color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Grayish-Blue);
 
   display: grid;
   width: 100vw;
@@ -52,6 +52,7 @@ header nav {
 }
 
 header nav h1 {
+    color: var(--Very-Light-Gray);
   font-size: 42px;
   letter-spacing: 0.5cm;
 }
@@ -119,9 +120,11 @@ main ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px 15px 50px;
-  border-radius: 5px;
-  background-color: black;
+  padding: 15px 20px 15px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--Very-Light-Gray);
+  border-bottom: 1px solid var(--Dark-Grayish-Blue);
 }
 
 main ul li .circle {
@@ -142,7 +145,8 @@ main ul li .circle #check {
 main ul li .text-list {
   display: flex;
   column-gap: 15px;
-  text-align: center;
+  width: 100%;
+  text-align: start;
   align-items: center;
 }
 
@@ -153,3 +157,18 @@ main ul li .text-list.checked {
     text-decoration: line-through;
 }
 
+main ul li #trash {
+    cursor: pointer;
+}
+
+/* menu filter  */
+.menu-filter {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--Very-Light-Gray);
+}
