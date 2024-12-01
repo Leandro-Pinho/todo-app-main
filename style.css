@@ -10,38 +10,41 @@
 
 body {
   --Very-Light-Gray: hsl(0, 0%, 98%);
-  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --bg-color: hsl(236, 33%, 92%);
+  --checked-color: hsl(236, 33%, 92%);
+  --Very-Dark-Desaturated-Blue: hsl(0, 0%, 98%);
   --Light-Grayish-Blue: hsl(233, 11%, 84%);
   --Dark-Grayish-Blue: hsl(236, 9%, 61%);
-  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  --Very-Dark-Grayish-Blue-text: hsl(235, 19%, 35%);
 
   background-image: url("./images/bg-desktop-light.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 
-  background-color: var(--Very-Light-Grayish-Blue);
   color: var(--Very-Dark-Grayish-Blue);
+  background-color: var(--bg-color);
 
   display: grid;
-  width: 100vw;
+  /* width: 100vw; */
 
   place-items: center;
 }
 
 body.dark {
-  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --bg-color: hsl(235, 21%, 11%);
+  --checked-color: hsl(233, 14%, 26%);
   --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
   --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
-  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  --Light-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue-text: hsl(233, 11%, 84%);
+  --Very-Dark-Grayish-Blue-1: hsl(237, 14%, 26%);
 
   background-image: url("./images/bg-desktop-dark.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 
-  background-color: var(--Very-Dark-Blue);
+  background-color: var(--bg-color);
 }
 
 header nav {
@@ -58,7 +61,7 @@ header nav h1 {
 }
 
 header nav img {
-  width: 38px;
+  width: 34px;
   cursor: pointer;
 }
 
@@ -81,19 +84,19 @@ header nav img {
 /* input search  */
 .inputSearch {
   width: 500px;
-  /* background-color: tomato; */
   margin-top: 30px;
   position: relative;
 }
 
-.inputSearch .circle {
-  width: 20px;
-  height: 20px;
+.inputSearch::before {
+  content: "";
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
-  border: 2px solid var(--Very-Light-Grayish-Blue);
+  border: 2px solid var(--checked-color);
   position: absolute;
   left: 15px;
-  top: 14px;
+  top: 12px;
   z-index: 10;
 }
 
@@ -104,63 +107,93 @@ header nav img {
   border-radius: 5px;
   border: none;
 
-  font-size: 20px;
-  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 16px;
+  color: var(--Very-Dark-Grayish-Blue-text);
+  background-color: var(--Very-Dark-Desaturated-Blue);
+}
+
+.inputSearch .search::placeholder {
+  color: var(--Dark-Grayish-Blue);
 }
 
 .inputSearch .search:focus {
   outline: none;
 }
 
-/* list  
-main ul li {
+/* list   */
+.list-container li {
   list-style: none;
 
   width: 500px;
   display: flex;
-  justify-content: space-between;
+  column-gap: 0.8rem;
+
   align-items: center;
+
   padding: 15px 20px 15px 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: var(--Very-Light-Gray);
-  border-bottom: 1px solid var(--Dark-Grayish-Blue);
+  /* color: var(--Very-Dark-Grayish-Blue); */
+  font-weight: 600;
+  color: var(--Very-Dark-Grayish-Blue-text);
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  border-bottom: 1px solid var(--checked-color);
+  position: relative;
+  cursor: pointer;
 }
 
-main ul li .circle {
+.list-container li:hover button {
+  display: block;
+}
+
+.list-container li button {
+  display: none;
+  position: absolute;
+  right: 20px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 20px;
+  color: #c6c1c1;
+}
+
+.list-container li:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* para aparecer o riscado na tarefa concluida */
+.inputCheck:checked ~ span.completed {
+  color: var(--Light-Grayish-Blue);
+  text-decoration: line-through;
+}
+
+/* para aparecer o imagem de checado */
+.inputCheck:checked::before {
+  content: "✔";
+  position: absolute;
+  font-size: 10px;
+  left: 3.5px;
+  top: 1.5px;
+}
+
+.inputCheck:checked {
+  /* content: "✔"; */
+  color: white;
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-size: cover;
+
+  position: relative;
+}
+
+.inputCheck {
+  appearance: none;
+
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid var(--Very-Light-Grayish-Blue);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid var(--checked-color);
 }
 
-main ul li .circle #check {
-    width: 10px;
-    height: 10px;
-}
-
-main ul li .text-list {
-  display: flex;
-  column-gap: 15px;
-  width: 100%;
-  text-align: start;
-  align-items: center;
-}
-
-main ul li .text-list.checked .circle{
-    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))
-}
-main ul li .text-list.checked {
-    text-decoration: line-through;
-}
-
-main ul li #trash {
-    cursor: pointer;
-}
-*/
 /* menu filter  */
 .menu-filter {
   display: flex;
@@ -170,69 +203,22 @@ main ul li #trash {
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: var(--Very-Light-Gray);
+  background-color: var(--Very-Dark-Desaturated-Blue);
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--Dark-Grayish-Blue);
 }
 
-/* configuração do lista de tarefa */
-main ul li {
-  list-style: none;
-  font-size: 17px;
-  padding: 12px 8px 12px 50px;
-  background-color: var(--Very-Light-Gray);
-  border-bottom: 1px solid var(--Dark-Grayish-Blue);
-  user-select: none;
+.menu-filter button.filter-btn,
+.delete-items {
+  border: none;
+  background: none;
   cursor: pointer;
-  position: relative;
+  margin-right: 5px;
+  font-weight: 800;
+  color: var(--Dark-Grayish-Blue);
 }
-
-main ul li:nth-child(1) {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-/* para aparecer o riscado na tarefa concluida */
-main ul li::before {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--Very-Dark-Grayish-Blue);
-  background-size: cover;
-  background-position: center;
-  top: 12px;
-  left: 8px;
-  z-index: 10;
-}
-
-main ul li.checked {
-  color: #555;
-  text-decoration: line-through;
-}
-
-/* para aparecer o imagem de checado */
-ul li.checked::before {
-  z-index: 10;
-}
-ul li.checked::before {
-  background-image: url(./images/icon-check.svg);
-  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-}
-
-/* o icone "x" para apagar o texto */
-main ul li span {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  width: 40px;
-  height: 40px;
-  font-size: 22px;
-  color: #555;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 30px;
-}
-
-main ul li span:hover {
-  background: #535c6f;
+.menu-filter button.filter-btn.active {
+  color: rgb(77, 91, 215);
 }

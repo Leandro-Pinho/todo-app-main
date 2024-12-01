@@ -32,19 +32,19 @@
     <main>
       <div class="inputSearch">
         <small class="circle"></small>
-        <input type="text" class="search" id="AddTask" />
+        <input type="text" class="search" id="AddTask" placeholder="Create a new todo..."/>
       </div>
 
       <ul class="list-container">
         <!-- list  -->
       </ul>
-      
+
       <div class="menu-filter">
-        <div class="lenght-items">5 items left</div>
-        <div class="filter-items">
-          <input type="button" value="All" />
-          <input type="button" value="Active" />
-          <input type="button" value="Completed" />
+        <div class="length-items">5 items left</div>
+        <div class="filters">
+          <button data-filter="all" class="filter-btn active">All</button>
+          <button data-filter="completed" class="filter-btn">Active</button>
+          <button data-filter="not-completed" class="filter-btn">Completed</button>
         </div>
         <div class="delete-items">Clear Completed</div>
       </div>
@@ -53,7 +53,7 @@
     <!-- <footer>
       <p>Drag and drop to reorder</p>
     </footer> -->
-    
+
     <script src="script.js"></script>
   </body>
 </html>
