@@ -69,8 +69,8 @@ const renderTasks = (filter = "all") => {
       renderTasks(filter);
     });
 
-    itemsLength.innerText = `${tasks.length} items left`;
-    //   console.log((tasks.length) == (filter === "not-completed"));
+    itemsLength.innerText = (tasks.length > 0 ) ? `${tasks.length} items left` : `0 items left`;
+    
     taskItem.appendChild(checkbox);
     taskItem.appendChild(taskTextEl);
     taskItem.appendChild(removeBtn);
