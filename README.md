@@ -1,8 +1,6 @@
-# Frontend Mentor - Todo app
+# To-Do App com Filtros
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
-
-# To-Do App com Filtros e Drag-and-Drop
 
 Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML, CSS e JavaScript. Ele permite aos usuários adicionar tarefas, marcar como concluídas, filtrar por status e reorganizar as tarefas usando drag-and-drop.
 
@@ -17,7 +15,6 @@ Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML,
 - **Remover Tarefas**:
   - Remover uma tarefa individual clicando no botão "Remover".
   - Remover todas as tarefas concluídas clicando no botão "Remover Completadas".
-- **Reorganizar Tarefas**: Use drag-and-drop para alterar a posição das tarefas na lista.
 
 ## Tecnologias Utilizadas
 
@@ -33,7 +30,6 @@ Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML,
    - Adicione novas tarefas no campo de texto.
    - Clique em tarefas para marcá-las como concluídas.
    - Use os botões de filtro para visualizar tarefas específicas.
-   - Arraste e solte tarefas para reorganizá-las.
    - Remova tarefas concluídas ou específicas conforme necessário.
 
 ## Estrutura do Código
@@ -46,16 +42,7 @@ Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML,
   - Gerencia a lógica de tarefas, incluindo:
     - Adicionar novas tarefas ao array.
     - Atualizar a interface com base no status das tarefas.
-    - Implementar drag-and-drop para reorganizar as tarefas.
     - Lidar com eventos de clique e filtros.
-
-## Capturas de Tela
-
-### Tela Inicial
-![To-Do App - Tela Inicial](https://via.placeholder.com/600x300?text=Tela+Inicial)
-
-### Drag-and-Drop
-![To-Do App - Drag-and-Drop](https://via.placeholder.com/600x300?text=Drag+and+Drop)
 
 ## Contribuição
 
