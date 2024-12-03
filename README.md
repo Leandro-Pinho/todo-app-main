@@ -2,7 +2,7 @@
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
 
-Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML, CSS e JavaScript. Ele permite aos usuários adicionar tarefas, marcar como concluídas, filtrar por status e reorganizar as tarefas usando drag-and-drop.
+Este é um simples aplicativo de lista de tarefas (To-Do) desenvolvido com HTML, CSS e JavaScript. Ele permite aos usuários adicionar tarefas, marcar como concluídas, filtrar por status.
 
 ## Funcionalidades
 
