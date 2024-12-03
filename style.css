@@ -47,6 +47,8 @@ body.dark {
   background-color: var(--bg-color);
 }
 
+
+
 header nav {
   display: flex;
   justify-content: space-between;
