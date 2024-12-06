@@ -24,9 +24,6 @@ body {
   color: var(--Very-Dark-Grayish-Blue);
   background-color: var(--bg-color);
 
-  display: grid;
-  /* width: 100vw; */
-
   place-items: center;
 }
 
@@ -257,11 +254,13 @@ header nav img {
     background-image: url("./images/bg-mobile-light.jpg");
     background-repeat: no-repeat;
     background-size: 375px;
+    max-width: 375px;
   }
   body.dark {
     background-image: url("./images/bg-mobile-dark.jpg");
     background-repeat: no-repeat;
     background-size: 375px;
+    max-width: 375px;
   }
   header {
     width: 375px;
